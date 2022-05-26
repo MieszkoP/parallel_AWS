@@ -10,7 +10,7 @@ do
 done
 rm gutenberg-500M.txt
 
-hdfs dfs -mkdir text-input
-hdfs dfs -put *.txt text-input
+hdfs dfs -mkdir tekstintput
+hdfs dfs -put *.txt tekstintput
 
-time hadoop jar /usr/lib/hadoop/hadoop-streaming.jar -files mapper.py,reducer.py -mapper mapper.py -reducer reducer.py -input text-input -output text-output
+time hadoop jar /usr/lib/hadoop/hadoop-streaming.jar -files mapper.py,reducer.py -mapper mapper.py -reducer reducer.py -input tekstintput -output tekstoutput
